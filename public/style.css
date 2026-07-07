@@ -1,0 +1,22 @@
+body{
+    font-family: Arial;
+    background:#f4f4f4;
+}
+
+.container{
+
+    width:500px;
+    margin:100px auto;
+    text-align:center;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+}
+
+button{
+
+    padding:10px 20px;
+    font-size:18px;
+    cursor:pointer;
+}
