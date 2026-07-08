@@ -4,9 +4,15 @@
   "description": "Simple Node.js Deployment Project",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "lint": "eslint .",
+    "test": "jest --passWithNoTests"
   },
   "dependencies": {
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "eslint": "^9.31.0",
+    "jest": "^30.0.5"
   }
 }
