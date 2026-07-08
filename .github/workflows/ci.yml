@@ -4,7 +4,8 @@ on:
   pull_request:
     branches:
       - master
-
+      - main
+    
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,7 +30,9 @@ jobs:
         run: npm test
 
       - name: Build Docker Image
-        run: docker build -t vigneshawss/app-page:${{ github.sha }} .
+        run: |
+          docker build -t vigneshawss/app-page:${{ github.sha }} .
+          docker tag vigneshawss/app-page:${{ github.sha }} vigneshawss/app-page:v1
 
       - name: Scan Docker Image
         uses: aquasecurity/trivy-action@master
