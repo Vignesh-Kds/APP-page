@@ -22,7 +22,18 @@ jobs:
 
       - name: Install Dependencies
         run: npm ci
-
+      
+      - name: Debug Workspace
+        run: |
+          pwd
+          ls -la
+          echo "========== package.json =========="
+          cat package.json
+          echo "========== eslint.config.js =========="
+          cat eslint.config.js || echo "eslint.config.js NOT FOUND"
+          echo "========== eslint version =========="
+          npx eslint --version
+        
       - name: Run Lint
         run: npm run lint
 
